@@ -82,6 +82,8 @@ it('.buckets', function(done){
 
 describe('.keys', function(){
   it('if bucket exists', function(done){
+    this.timeout(1000);
+    //riak.keys(bucket).start(function(e,r,m){
     riak.keys(bucket, function(e,r,m){
       console.log(arguments);
       err = e;
